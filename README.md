@@ -43,14 +43,10 @@ This model is used to represent events across the solution and keeps the structu
 
 Database table (db.sql)
 
-
-create TABLE IF NOT EXISTS users_revenue (
-
-  create TABLE IF NOT EXISTS users_revenue (
-
-      user_id VARCHAR(255) PRIMARY KEY,
-      revenue INTEGER NOT NULL DEFAULT 0
-  );
+    CREATE TABLE IF NOT EXISTS users_revenue (
+          user_id VARCHAR(255) PRIMARY KEY,
+          revenue INTEGER NOT NULL DEFAULT 0
+    );
 
 
 ## How to run the full flow
