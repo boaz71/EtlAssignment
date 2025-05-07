@@ -30,12 +30,7 @@ Revenue is calculated **in memory**, and then each user is updated in the databa
 
 ## 4. SharedModels
 A class library project that contains a shared model used by both ServerApp and DataProcessorApp:
-
-### `EventModel.cs`
-
-```csharp
-namespace SharedModels;
-
+EventModel
 public class EventModel
 {
     public string UserId { get; set; } = string.Empty;
@@ -44,6 +39,8 @@ public class EventModel
 }
 This model is used to represent events across the solution and keeps the structure consistent
 
+## Database
+
 Database table (db.sql)
 CREATE TABLE IF NOT EXISTS users_revenue (
     user_id VARCHAR(255) PRIMARY KEY,
@@ -51,7 +48,7 @@ CREATE TABLE IF NOT EXISTS users_revenue (
 );
 
 =========================================
-How to run the full flow
+## How to run the full flow
 =========================================
 1.Make sure PostgreSQL is running and a database named etl_db exists
 2.Run ServerApp (preferably from Visual Studio)
