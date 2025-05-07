@@ -44,8 +44,10 @@ This model is used to represent events across the solution and keeps the structu
 Database table (db.sql)
 
 CREATE TABLE IF NOT EXISTS users_revenue (
+
     user_id VARCHAR(255) PRIMARY KEY,
     revenue INTEGER NOT NULL DEFAULT 0
+    
 );
 
 
