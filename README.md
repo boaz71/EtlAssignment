@@ -47,23 +47,32 @@ CREATE TABLE IF NOT EXISTS users_revenue (
     revenue INTEGER NOT NULL DEFAULT 0
 );
 
-=========================================
 ## How to run the full flow
-=========================================
+
 1.Make sure PostgreSQL is running and a database named etl_db exists
+
 2.Run ServerApp (preferably from Visual Studio)
+
 3.Run ClientApp – it will send events to the server
+
 4.Run DataProcessorApp – it will process the events and update the DB
+
 
 You can verify the result with a GET request to:
 https://localhost:5000/events/userEvents/{userId}
 
 
 ## Notes
-============================================
+
 Everything is built with .NET 8
+
 Events are stored in a simple text log file on the server
+
 DataProcessor reads the file via HTTP, not local path
+
 No Entity Framework – raw SQL is used
+
 SharedModels avoids duplicated code between projects
+
 Authorization is only required for /liveEvent endpoint
+
