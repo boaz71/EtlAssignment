@@ -20,12 +20,6 @@ httpClient.BaseAddress = new Uri("https://localhost:5000"); // Update if your se
 // Add Authorization header for all requests
 httpClient.DefaultRequestHeaders.Add("Authorization", "secret");
 
-var response1 = await httpClient.GetAsync("/Events/helloWorld");
-
-if (response1.IsSuccessStatusCode)
-{
-    Console.WriteLine($"Sent event");
-}
 
 // Loop through each line and send it to the server
 foreach (var line in lines)
